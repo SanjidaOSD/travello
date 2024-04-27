@@ -22,8 +22,6 @@ const AllTouristsSpot = () => {
         console.log(sordtedSpot);
         setAllSpots(sordtedSpot)
     }
-
-    console.log(allSpots);
     return (
 
         <div className="container mx-auto px-5">
