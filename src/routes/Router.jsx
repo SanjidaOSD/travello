@@ -6,6 +6,8 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import AddTouristsSpot from "../pages/AddTouristsSpot/AddTouristsSpot";
 import AllTouristsSpot from "../pages/AllTouristsSpot/AllTouristsSpot";
+import SpotDetails from "../pages/SpotDetails/SpotDetails";
+import MyList from "../pages/MyList/MyList";
 
 const Router = createBrowserRouter([
     {
@@ -15,8 +17,7 @@ const Router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home/>,
-                loader: async()=> await fetch('http://localhost:5000/allTouristsSpot')
+                element: <Home/>
             },
             {
                 path: '/login',
@@ -33,8 +34,17 @@ const Router = createBrowserRouter([
             {
                 path: '/allTouristsSpot',
                 element: <AllTouristsSpot/>,
-                loader: async()=> await fetch('http://localhost:5000/allTouristsSpot')
+            },
+            {
+                path: '/spotDetails/:id',
+                element: <SpotDetails/>,
+                loader: async({params})=> await fetch(`http://localhost:5000/allTouristsSpot/${params.id}`)
+            },
+            {
+                path: '/myList',
+                element: <MyList/>
             }
+
         ]
     }
 ])

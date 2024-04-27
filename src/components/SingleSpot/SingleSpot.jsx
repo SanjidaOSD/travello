@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const SingleSpot = ({spot}) => {
     const {_id, spotName, image, average, seasonality, travelTime, totalVisitor} = spot;
-    console.log(image);
     return (
         <div className='shadow-xl rounded-b-xl w-full'>
             <div>
@@ -13,7 +12,7 @@ const SingleSpot = ({spot}) => {
             <div className='p-5 w-full rounded-b-xl border-x-2 border-b-2 '>
                 <h1 className='text-2xl font-bold'>{spotName}</h1>
                 <div className='flex gap-5 my-2 font-semibold'>
-                    <h3 className='flex items-center gap-2'><FaSackDollar className='mb-[2px]'/> {average}</h3>
+                    <h3 className='flex items-center gap-2'><FaSackDollar className='mb-[2px]'/> {average}$</h3>
                     <h3 className='flex items-center gap-2'><FaCalendar className='mb-[2px]'/> {travelTime}</h3>
                 </div>
                 <h3 className='font-medium mb-2'>Season : <span className='font-semibold'>{seasonality}</span></h3>
