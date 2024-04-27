@@ -41,9 +41,8 @@ const Router = createBrowserRouter([
                 loader: async({params})=> await fetch(`http://localhost:5000/allTouristsSpot/${params.id}`)
             },
             {
-                path: '/myList/:email',
+                path: '/myList/email/:email',
                 element: <MyList/>,
-                loader: async({params})=> await fetch(`http://localhost:5000/allTouristsSpot/${params.email}`)
             }
 
         ]
