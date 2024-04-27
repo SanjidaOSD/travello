@@ -38,7 +38,7 @@ const AddTouristsSpot = () => {
 
     return (
         <div className="container mx-auto px-5">
-            <h1 className="text-xl md:text-2xl text-center font-semibold mt-5">Add A Tourist Spot</h1>
+            <h1 className="text-xl md:text-2xl text-center font-semibold mt-5">Add A Tourist Spot from Southeast Asia</h1>
             <div>
                 <form onSubmit={handleSubmit(handleAddSpot)} className="mt-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 md:gap-3">
