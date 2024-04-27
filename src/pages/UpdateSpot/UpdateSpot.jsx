@@ -8,14 +8,29 @@ const UpdateSpot = () => {
     const {id} = useParams();
     const [spot, setSpot] = useState({});
     const [loading, setLoading] = useState(true);
-
-
     const {register, handleSubmit, formState: { errors }} = useForm()
+    const {countryName, spotName, image, location, description, average, seasonality, travelTime, totalVisitor} =  spot;
 
-    
     // Update spot data function
-    const handleUpdate = (id) =>{
-        console.log("Update" , id);
+    const handleUpdate = (data) =>{
+        fetch(`http://localhost:5000/allTouristsSpot/${id}`,{
+            method: 'PUT',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body:JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(data=>{
+            if(data.modifiedCount > 0){
+                Swal.fire({
+                    title: 'Successfull',
+                    text: 'Spot updated successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Close'
+                  })
+            }
+        })
     }
 
 
@@ -28,13 +43,10 @@ const UpdateSpot = () => {
         })
     }, [id])
 
-    const {countryName, spotName, image, location, description, average, seasonality, travelTime, totalVisitor} =  spot;
-
-
 
     return (
         <div className="container mx-auto px-5">
-            <h1 className="text-xl md:text-2xl text-center font-semibold mt-5">Update </h1>
+            <h1 className="text-xl md:text-2xl text-center font-semibold mt-5">Update {spotName}</h1>
             {
                 loading ?
                 <div className="flex justify-center items-center mt-10">
@@ -42,7 +54,7 @@ const UpdateSpot = () => {
                 </div>
                 :
                 <div>
-                <form onSubmit={handleSubmit(()=>handleUpdate(id))} className="mt-10">
+                <form onSubmit={handleSubmit(handleUpdate)} className="mt-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 md:gap-3">
                         <div>
                             <select defaultValue={countryName} className="px-5 py-2 bg-red-50 w-full my-1 placeholder:text-gray-800 placeholder:font-semibold text-gray-950 font-semibold" {...register("countryName" , { required: true })}>
