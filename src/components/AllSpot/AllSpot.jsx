@@ -12,7 +12,6 @@ const AllSpot = ({allSpotsArr}) => {
         console.log(sordtedSpot);
         setAllSpots(sordtedSpot)
     }
-    console.log(allSpotsArr);
     return (
         <div className="container mx-auto px-5">
             <h1 className="text-xl md:text-2xl text-center font-semibold mt-5">All Tourist Spot</h1>
@@ -37,9 +36,7 @@ const AllSpot = ({allSpotsArr}) => {
 
 
 AllSpot.propTypes = {
-    handleSort: PropTypes.func,
-    loading: PropTypes.bool,
-    allSpotsArr: PropTypes.array,
+    allSpotsArr: PropTypes.array
 };
 
 export default AllSpot;

@@ -42,7 +42,7 @@ const Slider = () => {
                             </div>
                         </SwiperSlide>        
                     </Swiper>
-                    <div className='container h-full mx-auto px-5 text-center absolute top-0 left-1/2 -translate-x-1/2 z-50'>
+                    <div className='container h-full mx-auto px-5 text-center absolute top-0 left-1/2 -translate-x-1/2 z-10'>
                         <div className='w-full h-full flex flex-col justify-center items-center px-10'>
                             <h1 className='text-2xl md:text-3xl lg:text-5xl xl:text-6xl text-white font-bold leading-[60px] max-w-[670]' >Discover Your Tourist Spot Here</h1>
                             <p className='text-sm md:text-base font-medium text-white mt-5 mb-20 max-w-[670px]'>Discover a curated selection of premier real estate listings. Find your dream home with ease. Start exploring today for your perfect match.</p>

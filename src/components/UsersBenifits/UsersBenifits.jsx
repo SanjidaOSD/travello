@@ -13,7 +13,7 @@ const UsersBenifits = () => {
             <div className="grid gap-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">  
                 <div className="p-8 shadow-lg rounded-xl">
                     <div className="w-20 h-20 bg-red-50 rounded-lg flex justify-center items-center">
-                        <BiGift className="text-4xl" />
+                        <BiGift className="text-4xl text-gray-600" />
                     </div>
                     <div>
                         <h1 className="text-[22px] mt-5 font-bold">Easy To Book</h1>
@@ -22,7 +22,7 @@ const UsersBenifits = () => {
                 </div>
                 <div className="p-8 shadow-lg rounded-xl">
                     <div className="w-20 h-20 bg-red-50 rounded-lg flex justify-center items-center">
-                        <TbHeartDollar className="text-4xl" />
+                        <TbHeartDollar className="text-4xl text-gray-600" />
                     </div>
                     <div>
                         <h1 className="text-[22px] mt-5 font-bold">Cheap than Other</h1>
@@ -31,7 +31,7 @@ const UsersBenifits = () => {
                 </div>
                 <div className="p-8 shadow-lg rounded-xl">
                     <div className="w-20 h-20 bg-red-50 rounded-lg flex justify-center items-center">
-                        <RiDiscountPercentLine  className="text-4xl" />
+                        <RiDiscountPercentLine  className="text-4xl text-gray-600" />
                     </div>
                     <div>
                         <h1 className="text-[22px] mt-5 font-bold">Best Offers</h1>
@@ -40,7 +40,7 @@ const UsersBenifits = () => {
                 </div>
                 <div className="p-8 shadow-lg rounded-xl">
                     <div className="w-20 h-20 bg-red-50 rounded-lg flex justify-center items-center">
-                        <BiSupport className="text-4xl" />
+                        <BiSupport className="text-4xl text-gray-600" />
                     </div>
                     <div>
                         <h1 className="text-[22px] mt-5 font-bold">24/7 Support</h1>
@@ -49,7 +49,7 @@ const UsersBenifits = () => {
                 </div>
                 <div className="p-8 shadow-lg rounded-xl">
                     <div className="w-20 h-20 bg-red-50 rounded-lg flex justify-center items-center">
-                        <HiOutlineReceiptRefund className="text-4xl" />
+                        <HiOutlineReceiptRefund className="text-4xl text-gray-600" />
                     </div>
                     <div>
                         <h1 className="text-[22px] mt-5 font-bold">Fast Refund</h1>
@@ -58,7 +58,7 @@ const UsersBenifits = () => {
                 </div>
                 <div className="p-8 shadow-lg rounded-xl">
                     <div className="w-20 h-20 bg-red-50 rounded-lg flex justify-center items-center">
-                        <HiOutlineViewfinderCircle className="text-4xl" />
+                        <HiOutlineViewfinderCircle className="text-4xl text-gray-600" />
                     </div>
                     <div>
                         <h1 className="text-[22px] mt-5 font-bold">Find All Spots</h1>

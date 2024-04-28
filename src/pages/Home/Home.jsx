@@ -1,8 +1,8 @@
 import CountryContainer from "../../components/CountryContainer/CountryContainer";
 import HappyClients from "../../components/HappyClients/HappyClients";
 import Slider from "../../components/Slider/Slider";
+import TouristSpots from "../../components/TouristSpots/TouristSpots";
 import UsersBenifits from "../../components/UsersBenifits/UsersBenifits";
-import AllTouristsSpot from "../AllTouristsSpot/AllTouristsSpot";
 
 const Home = () => {
 
@@ -10,7 +10,7 @@ const Home = () => {
         <div>
             <Slider />
             <div className="mt-20"></div>
-            <AllTouristsSpot />
+            <TouristSpots/>
             <UsersBenifits/>
             <CountryContainer/>
             <HappyClients/>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
 import useAuth from "../../hooks/useAuth";
@@ -6,7 +6,10 @@ import Swal from 'sweetalert2'
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
-    const { emailLogin } = useAuth();  
+    const { emailLogin, setLoading } = useAuth();  
+    const navigate = useNavigate();
+    const location = useLocation();
+    const previousLocation = location?.state || '/';
 
     // Handle login by email and password
     const handleLogin = (data) => {
@@ -45,12 +48,14 @@ const Login = () => {
                 icon: "success",
                 title: "Login Successfull"
             });
+            navigate(previousLocation)
         })
         .catch(()=>{
             Swal.fire({
                 icon: "error",
                 title: "Login Failed"
             });
+            setLoading(false);
         })
     }
 

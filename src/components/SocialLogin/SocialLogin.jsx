@@ -1,16 +1,33 @@
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import useAuth from "../../hooks/useAuth";
+import { useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const SocialLogin = () => {
 
-    const {googleLogin, githubLogin} = useAuth();
+    const {googleLogin, githubLogin, setLoading} = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const previousLocation = location?.state || '/';
 
     // Handle Google Login
     const handleGoogleLogin = () =>{
         googleLogin()
-        .then(res => {console.log(res)})
-        .catch(err => {console.log(err)})
+        .then(()=> {
+            Swal.fire({
+                icon: "success",
+                title: "Login Successfull"
+            });
+            navigate(previousLocation)
+        })
+        .catch(()=> {
+            Swal.fire({
+                icon: "error",
+                title: "Login Failed"
+            });
+            setLoading(false);
+        })
     }
    
     // Handle Github Login

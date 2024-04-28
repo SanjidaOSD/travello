@@ -43,7 +43,7 @@ const Navbar = () => {
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-30 p-2 shadow bg-base-100 rounded-md w-52">
                         {links}
                     </ul>
                     </div>
@@ -68,9 +68,9 @@ const Navbar = () => {
                          <div className="flex">
                              <div className="dropdown dropdown-hover  dropdown-bottom dropdown-end">
                              <div tabIndex={0} role="button" className="m-1"><img className="w-10 h-10 rounded-full" src={userData.photoURL} alt="" /></div>
-                                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow-2xl bg-base-100 rounded-lg w-52">
-                                     <li className="font-semibold"><p>{userData.displayName}</p></li>
-                                     <li className="font-semibold"><button onClick={signOutUser}>Logout</button></li>
+                                 <ul tabIndex={0} className="dropdown-content z-30 menu px-5 py-3 shadow-2xl bg-base-100 rounded-lg mx-auto text-center">
+                                     <li className="font-semibold"><p className="block text-center text-nowrap">{userData.displayName}</p></li>
+                                     <li className="font-semibold"><button className="block text-center" onClick={signOutUser}>Logout</button></li>
                                  </ul>
                              </div>
                          </div>

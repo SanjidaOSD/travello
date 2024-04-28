@@ -10,6 +10,7 @@ import SpotDetails from "../pages/SpotDetails/SpotDetails";
 import MyList from "../pages/MyList/MyList";
 import UpdateSpot from "../pages/UpdateSpot/UpdateSpot";
 import CountryAllSpots from "../pages/CountryAllSpots/CountryAllSpots";
+import ProtectedRoute from "../protectedRoute/ProtectedRoute";
 
 const Router = createBrowserRouter([
     {
@@ -31,7 +32,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/addTouristsSpot',
-                element: <AddTouristsSpot/>
+                element: <ProtectedRoute><AddTouristsSpot/></ProtectedRoute>
             },
             {
                 path: '/allTouristsSpot',
@@ -39,16 +40,16 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/spotDetails/:id',
-                element: <SpotDetails/>,
+                element: <ProtectedRoute><SpotDetails/></ProtectedRoute>,
                 loader: async({params})=> await fetch(`http://localhost:5000/allTouristsSpot/${params.id}`)
             },
             {
                 path: '/myList/email/:email',
-                element: <MyList/>,
+                element: <ProtectedRoute><MyList/></ProtectedRoute>
             },
             {
                 path: '/updateSpot/:id',
-                element: <UpdateSpot/>,
+                element: <ProtectedRoute><UpdateSpot/></ProtectedRoute>,
                 loader: async({params})=> await fetch(`http://localhost:5000/allTouristsSpot/${params.id}`)
             },
             {
