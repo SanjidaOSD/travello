@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const SingleSpot = ({spot}) => {
     const {_id, spotName, image, average, seasonality, travelTime, totalVisitor} = spot;
     return (
-        <div className='shadow-xl rounded-b-xl w-full'>
+        <div className='shadow-lg hover:shadow-2xl duration-300 rounded-b-xl w-full hover:scale-[1.01] cursor-pointer'>
             <div>
                 <img className='h-[250px] w-full object-cover rounded-t-xl' src={image} alt="Spot Image" />
             </div>
