@@ -4,8 +4,10 @@ import 'swiper/css/navigation';
 import { Navigation, Autoplay } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import { CgArrowLongDown } from "react-icons/cg";
+import { Typewriter } from 'react-simple-typewriter'
 
 const Slider = () => {
+
 
     return (
         <section>
@@ -44,14 +46,24 @@ const Slider = () => {
                     </Swiper>
                     <div className='container h-full mx-auto px-5 text-center absolute top-0 left-1/2 -translate-x-1/2 z-10'>
                         <div className='w-full h-full flex flex-col justify-center items-center px-10'>
-                            <h1 className='text-2xl md:text-3xl lg:text-5xl xl:text-6xl text-white font-bold leading-[60px] max-w-[670]' >Discover Your Tourist Spot Here</h1>
-                            <p className='text-sm md:text-base font-medium text-white mt-5 mb-20 max-w-[670px]'>Discover a curated selection of premier real estate listings. Find your dream home with ease. Start exploring today for your perfect match.</p>
+                            <h1 className='text-2xl md:text-3xl lg:text-5xl xl:text-6xl text-white font-bold leading-[60px] max-w-[670]' >
+                                Discover Your
+                                <span className='text-[#fa0066]'>
+                                    <Typewriter
+                                        words={[' Next Adventure', ' Ideal Journey', ' Perfect Getaway']}
+                                        loop={0}
+                                        cursor
+                                        cursorStyle='|'
+                                        typeSpeed={70}
+                                        deleteSpeed={50}
+                                        delaySpeed={1000}
+                                    />
+                                </span>
+                                With Us.
+                            </h1>
+                            <p className='text-sm md:text-base font-medium text-white mt-10 mb-20 max-w-[670px]'>Explore breathtaking destinations, indulge in unique experiences, and create unforgettable memories with our expertly curated travel packages. Your perfect getaway awaits!</p>
                             <div data-aos="zoom-in">
-                                <Link to={'/allTouristsSpot'} className='px-10 py-2 bg-[#08bdba] text-white font-semibold border-2 border-transparent hover:border-white hover:bg-transparent duration-200'>Explore Now</Link>
-                            </div>
-                            <div className='flex justify-center items-center flex-col mt-16'>
-                                <p className='text-white'>Scroll Down</p>
-                                <CgArrowLongDown className='text-white text-3xl mt-3'/>
+                                <Link to={'/allTouristsSpot'} className='px-10 py-2 bg-[#ff0066] text-white font-semibold border-2 border-transparent hover:border-white hover:bg-transparent duration-200'>Explore Now</Link>
                             </div>
                         </div>
                     </div>
