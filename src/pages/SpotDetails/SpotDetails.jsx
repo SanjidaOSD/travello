@@ -13,7 +13,7 @@ const SpotDetails = () => {
             <h1 className="text-xl text-center font-semibold mb-10">Details of {spotName}</h1>
             <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <div>
-                    <img className="w-full h-full object-cover rounded-lg" src={image} alt="Spot Image" />
+                    <img className="w-full h-[350px] object-cover rounded-lg" src={image} alt="Spot Image" />
                 </div>
                 <div className="px-8 py-5 shadow-xl rounded-lg border-t">
                     <h1 className="text-2xl font-bold">{spotName}</h1>
