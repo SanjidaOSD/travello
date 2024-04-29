@@ -49,7 +49,7 @@ const UpdateSpot = () => {
             <h1 className="text-xl md:text-2xl text-center font-semibold mt-5">Update {spotName}</h1>
             {
                 loading ?
-                <div className="flex justify-center items-center mt-10">
+                <div className="min-h-[calc(100vh-280px)] flex justify-center items-center mt-10">
                     <FadeLoader color="#ff0066" />
                 </div>
                 :

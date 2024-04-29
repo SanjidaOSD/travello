@@ -1,14 +1,17 @@
 import { useForm } from "react-hook-form";
 import { FaUser } from "react-icons/fa";
 import { MdPhoto } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Swal from 'sweetalert2'
+import { Fade } from "react-awesome-reveal";
 
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const {emailRegister, handleUpdateUserData, setUser} = useAuth();
+    const navigate = useNavigate();
+
 
     const handleEmailRegister = (data) =>{
         const { email, password, name, photo} = data;
@@ -48,9 +51,11 @@ const Register = () => {
                 icon: "success",
                 title: "Registered Successfully"
             });
+            navigate('/')
             handleUpdateUserData(name, photo)
             .then(()=>{
                 setUser({displayName:name, photoURL: photo})
+                
             })
         })
        .catch(()=>{
@@ -67,6 +72,7 @@ const Register = () => {
                 <h1 className="font-bold text-xl text-center mt-5">Register New User</h1>
                 <div className="flex justify-center items-center mt-10 mb-20 min-h-[calc(100vh-520px)]">
                     <form onSubmit={handleSubmit(handleEmailRegister)} className="w-[95%] md:w-3/4 lg:w-1/2 mx-auto font-semibold">
+                    <Fade direction={'up'} cascade damping={0.1}>
                         <label className="input rounded-none input-bordered flex items-center gap-2">
                             <FaUser className="text-gray-500" />
                             <input type="text" className="grow" placeholder="Full Name" name="name" {...register("name", { required: true })}/>
@@ -90,6 +96,7 @@ const Register = () => {
                         <button className="btn rounded-none hover:bg-[#ff0066] hover:text-white w-full mt-5" type="submit">Register</button>
                         <p className="text-center mt-3 text-gray-500 font-bold"></p>
                         <h3 className="text-center mt-3">Already have an account? Please <Link to={'/login'} className="text-[#ff0066] font-bold">Login</Link> Now.</h3>
+                    </Fade>
                     </form>
                 </div>
             </div>

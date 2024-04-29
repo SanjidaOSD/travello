@@ -3,8 +3,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Autoplay } from 'swiper/modules';
 import { Link } from 'react-router-dom';
-import { CgArrowLongDown } from "react-icons/cg";
 import { Typewriter } from 'react-simple-typewriter'
+import { Fade } from 'react-awesome-reveal';
 
 const Slider = () => {
 
@@ -61,10 +61,14 @@ const Slider = () => {
                                 </span>
                                 With Us.
                             </h1>
-                            <p className='text-sm md:text-base font-medium text-white mt-10 mb-20 max-w-[670px]'>Explore breathtaking destinations, indulge in unique experiences, and create unforgettable memories with our expertly curated travel packages. Your perfect getaway awaits!</p>
-                            <div data-aos="zoom-in">
-                                <Link to={'/allTouristsSpot'} className='px-10 py-2 bg-[#ff0066] text-white font-semibold border-2 border-transparent hover:border-white hover:bg-transparent duration-200'>Explore Now</Link>
-                            </div>
+                            <Fade direction={'up'} cascade damping={0.1}>
+                                <p className='text-sm md:text-base font-medium text-white mt-10 mb-20 max-w-[670px]'>Explore breathtaking destinations, indulge in unique experiences, and create unforgettable memories with our expertly curated travel packages. Your perfect getaway awaits!</p>
+                            </Fade>
+                            <Fade direction={'up'} cascade damping={0.1}>
+                                <div >
+                                    <Link to={'/allTouristsSpot'} className='px-10 py-2 bg-[#ff0066] text-white font-semibold border-2 border-transparent hover:border-white hover:bg-transparent duration-200'>Explore Now</Link>
+                                </div>
+                            </Fade>
                         </div>
                     </div>
                 </div>

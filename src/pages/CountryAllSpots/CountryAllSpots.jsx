@@ -22,7 +22,7 @@ const CountryAllSpots = () => {
             <h1 className="text-2xl font-bold text-center mt-10">{country}&apos;s All Spots</h1>
             {
                 loading ?
-                <div className="flex justify-center items-center mt-20">
+                <div className="min-h-[calc(100vh-280px)] flex justify-center items-center mt-20">
                    <FadeLoader color="#ff0066" />
                 </div>
                 : 

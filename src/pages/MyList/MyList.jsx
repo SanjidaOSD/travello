@@ -59,13 +59,13 @@ const MyList = () => {
             </div>
             {
                 loading ? 
-                <div className="flex justify-center items-center mt-10">
+                <div className="min-h-[calc(100vh-280px)] flex justify-center items-center mt-10">
                     <FadeLoader color="#ff0066" />
                 </div>
                 :
             
                 dataLoading ?
-                <div className="flex justify-center items-center mt-10">
+                <div className="min-h-[calc(100vh-280px)] flex justify-center items-center mt-10">
                    <FadeLoader color="#ff0066" />
                 </div>
                 :
