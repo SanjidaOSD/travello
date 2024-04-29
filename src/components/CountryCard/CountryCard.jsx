@@ -8,7 +8,7 @@ const CountryCard = ({country}) => {
 
     return (
         <Fade direction={'up'} cascade damping={0.1}>
-            <div className='p-5 rounded-lg shadow-lg hover:shadow-2xl flex flex-col duration-300 hover:scale-[1.01] cursor-pointer'>
+            <div className='p-5 rounded-lg shadow-lg hover:shadow-2xl flex flex-col duration-300 hover:scale-[1.01] cursor-pointer h-full'>
                 <div>
                     <img className='w-full h-[250px] rounded-lg object-cover' src={image} alt="Country Image" />
                 </div>

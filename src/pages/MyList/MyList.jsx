@@ -3,6 +3,7 @@ import useAuth from "../../hooks/useAuth";
 import MyListSingleSpot from "../../components/MyListSingleSpot/MyListSingleSpot";
 import { FadeLoader } from "react-spinners";
 import Swal from "sweetalert2";
+import { Fade } from "react-awesome-reveal";
 
 const MyList = () => {
 
@@ -71,23 +72,25 @@ const MyList = () => {
                 :
                 <div>
                     <div className="mt-10 font-bold">
-                        <div className="grid grid-cols-12 bg-[#ff0066] text-white border-x">
-                            <div className="flex justify-center items-center col-span-1 border-y  py-2">
-                                <h1>SL No</h1>
+                        <Fade direction={'up'} cascade damping={0.1}>
+                            <div className="grid grid-cols-12 bg-[#ff0066] text-white border-x">
+                                <div className="flex justify-center items-center col-span-1 border-y  py-2">
+                                    <h1>SL No</h1>
+                                </div>
+                                <div className="col-span-4 flex justify-center items-center border-y border-s py-2">
+                                    <h1>Spot Name</h1>
+                                </div>
+                                <div className="col-span-2 flex justify-center items-center border-y border-s py-2">
+                                    <h1>Conuntry</h1>
+                                </div>
+                                <div className="col-span-2 flex justify-center items-center border-y border-s py-2">
+                                    <h1>Average Cost</h1>
+                                </div>
+                                <div className="col-span-3 flex justify-center items-center border-y border-s py-2">
+                                    <h1>Actions</h1>
+                                </div>
                             </div>
-                            <div className="col-span-4 flex justify-center items-center border-y border-s py-2">
-                                <h1>Spot Name</h1>
-                            </div>
-                            <div className="col-span-2 flex justify-center items-center border-y border-s py-2">
-                                <h1>Conuntry</h1>
-                            </div>
-                            <div className="col-span-2 flex justify-center items-center border-y border-s py-2">
-                                <h1>Average Cost</h1>
-                            </div>
-                            <div className="col-span-3 flex justify-center items-center border-y border-s py-2">
-                                <h1>Actions</h1>
-                            </div>
-                        </div>
+                        </Fade>
                     </div>
                     <div>
                         {

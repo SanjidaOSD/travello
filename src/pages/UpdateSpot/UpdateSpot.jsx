@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useForm } from "react-hook-form"
 import Swal from 'sweetalert2'
 import { useEffect, useState } from "react";
@@ -7,9 +7,10 @@ import { FadeLoader } from "react-spinners";
 const UpdateSpot = () => {
     const {id} = useParams();
     const [spot, setSpot] = useState({});
+    const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
     const {register, handleSubmit, formState: { errors }} = useForm()
-    const {countryName, spotName, image, location, description, average, seasonality, travelTime, totalVisitor} =  spot;
+    const {countryName, spotName, image, location, description, average, seasonality, travelTime, totalVisitor, email} =  spot;
 
     // Update spot data function
     const handleUpdate = (data) =>{
@@ -29,6 +30,7 @@ const UpdateSpot = () => {
                     icon: 'success',
                     confirmButtonText: 'Close'
                   })
+                  navigate(`/myList/email/${email}`)
             }
         })
     }
