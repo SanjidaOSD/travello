@@ -1,8 +1,33 @@
-# React + Vite
+# Website Name : Travelo
+# Selected Type : B9A10 Type-01 Requirements
+# Selected Category : Southeast Asia
+# Live Link : https://travelobd.netlify.app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+--------- Features of this Website -----------
 
-Currently, two official plugins are available:
+✅ This is a tourist spot based website for Southeast Asia.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ All user can see tourist spots here.
+
+✅ In the Add tourist spot page user can add a new tourist spot. user must have logged into website to add new spot.
+
+✅ To see details of a spot an user must have logged into website.
+
+✅ User can see all of his added spot in "My List" page.
+
+✅ User can Update spot data or Delete a spot from My List page.
+
+✅ This website is fully responsive for Mobile, Tablet and Desktop Devices.
+
+
+-------------- Used NPM Package --------------
+
+✅ React Hook Form
+
+✅ React Awesome Reveal
+
+✅ React Simple Typewriter
+
+✅ React Icons
+
+✅ Swiper Slider
