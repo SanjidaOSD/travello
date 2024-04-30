@@ -4,7 +4,7 @@ import useAuth from "../../hooks/useAuth";
 
 const Navbar = () => {
 
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState(false);
     const {user, userData, signOutUser, loading } = useAuth();
 
     const links = <>
@@ -20,14 +20,16 @@ const Navbar = () => {
 
     const handleTheme = (e) =>{
         if(e.target.checked){
-            setTheme('synthwave');
+            // setTheme('synthwave');
+            setTheme(true);
+            localStorage.setItem('theme', 'synthwave')
         }
         else{
-            setTheme('light')
+            setTheme(false)
+            localStorage.setItem('theme', 'light')
         }
     }
     useEffect(()=>{
-        localStorage.setItem('theme', theme);
         const savedTheme = localStorage.getItem('theme');
         document.querySelector('html').setAttribute('data-theme', savedTheme)
 
@@ -45,6 +47,16 @@ const Navbar = () => {
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-30 p-2 shadow bg-base-100 rounded-md w-52">
                         {links}
+                        {
+                        !loading && !user ?
+                        <div className="gap-2 mt-5 flex flex-col px-1 md:hidden">
+                            <Link to={'/login'} className="customBtn text-center">Login</Link>
+                            <Link to={'/register'} className="customBtn text-center">Register</Link>
+                        </div>
+                        :
+                        <>
+                        </>
+                        }
                     </ul>
                     </div>
                     <NavLink to={'/'} className="btn btn-ghost hover:bg-transparent text-xl">
@@ -77,12 +89,13 @@ const Navbar = () => {
                     }
                     {
                         !loading && !user ?
-                        <>
+                        <div className="gap-2 hidden md:flex">
                             <Link to={'/login'} className="customBtn">Login</Link>
                             <Link to={'/register'} className="customBtn">Register</Link>
-                        </>
+                        </div>
                         :
-                        <></>
+                        <>
+                        </>
                     }
 
 

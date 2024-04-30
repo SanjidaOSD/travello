@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
-import { Fade } from 'react-awesome-reveal';
 import { FaCalendar, FaSackDollar } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 
 const SingleSpot = ({spot}) => {
     const {_id, spotName, image, average, seasonality, travelTime, totalVisitor} = spot;
+
     return (
-        <Fade direction={'up'} cascade damping={0.1}>
             <div className='shadow-lg hover:shadow-2xl duration-300 rounded-b-xl w-full flex-col flex hover:scale-[1.01] cursor-pointer h-full'>
                 <div>
                     <img className='h-[250px] w-full object-cover rounded-t-xl' src={image} alt="Spot Image" />
@@ -26,7 +25,6 @@ const SingleSpot = ({spot}) => {
                     </div>
                 </div>
             </div>
-        </Fade>
     );
 };
 

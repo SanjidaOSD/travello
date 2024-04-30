@@ -16,6 +16,7 @@ const AllTouristsSpot = () => {
             setLoading(false)
         })
     }, [])
+    
     return (
         <div>
             {

@@ -5,13 +5,13 @@ import { useState } from 'react';
 
 const AllSpot = ({allSpotsArr}) => {
     
-    const [allSpots, setAllSpots] = useState(allSpotsArr)
+    const [allSpots, setAllSpots] = useState([...allSpotsArr])
 
     const handleSort = () =>{
         const sordtedSpot = allSpotsArr.sort((a, b) => b.average - a.average)
-        console.log(sordtedSpot);
         setAllSpots(sordtedSpot)
     }
+    
     return (
         <div className="container mx-auto px-5">
             <h1 className="text-xl md:text-2xl text-center font-semibold mt-5">All Tourist Spot</h1>
