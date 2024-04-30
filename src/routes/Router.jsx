@@ -41,7 +41,7 @@ const Router = createBrowserRouter([
             {
                 path: '/spotDetails/:id',
                 element: <ProtectedRoute><SpotDetails/></ProtectedRoute>,
-                loader: async({params})=> await fetch(`http://localhost:5000/allTouristsSpot/${params.id}`)
+                loader: async({params})=> await fetch(`https://travelo-server-gamma.vercel.app/allTouristsSpot/${params.id}`)
             },
             {
                 path: '/myList/email/:email',
@@ -50,7 +50,7 @@ const Router = createBrowserRouter([
             {
                 path: '/updateSpot/:id',
                 element: <ProtectedRoute><UpdateSpot/></ProtectedRoute>,
-                loader: async({params})=> await fetch(`http://localhost:5000/allTouristsSpot/${params.id}`)
+                loader: async({params})=> await fetch(`https://travelo-server-gamma.vercel.app/allTouristsSpot/${params.id}`)
             },
             {
                 path: '/country/:country',

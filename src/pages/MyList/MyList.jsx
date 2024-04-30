@@ -13,7 +13,7 @@ const MyList = () => {
     const {email} = userData || {};
     
     useEffect(()=>{
-        fetch(`http://localhost:5000/allTouristsSpot/email/${email}`)
+        fetch(`https://travelo-server-gamma.vercel.app/allTouristsSpot/email/${email}`)
         .then(res => res.json())
         .then(data => {
             setMyList(data);
@@ -34,7 +34,7 @@ const MyList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 //   
-                fetch(`http://localhost:5000/allTouristsSpot/${id}`, {
+                fetch(`https://travelo-server-gamma.vercel.app/allTouristsSpot/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

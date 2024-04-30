@@ -8,7 +8,7 @@ const TouristSpots = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/allTouristsSpot')
+        fetch('https://travelo-server-gamma.vercel.app/allTouristsSpot')
         .then(res => res.json())
         .then(data => {
             setSpotsArr(data);

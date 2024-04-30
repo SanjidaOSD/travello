@@ -16,7 +16,7 @@ const AddTouristsSpot = () => {
 
         const newSpot = {countryName, spotName, image, location, description, average, seasonality, travelTime, totalVisitor, displayName, email}
         // Send data to server side
-        fetch('http://localhost:5000/allTouristsSpot', {
+        fetch('https://travelo-server-gamma.vercel.app/allTouristsSpot', {
             method:'POST',
             headers:{
                 'content-type':'application/json'

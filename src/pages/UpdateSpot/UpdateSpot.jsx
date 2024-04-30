@@ -14,7 +14,7 @@ const UpdateSpot = () => {
 
     // Update spot data function
     const handleUpdate = (data) =>{
-        fetch(`http://localhost:5000/allTouristsSpot/${id}`,{
+        fetch(`https://travelo-server-gamma.vercel.app/allTouristsSpot/${id}`,{
             method: 'PUT',
             headers:{
                 'content-type': 'application/json'
@@ -37,7 +37,7 @@ const UpdateSpot = () => {
 
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/allTouristsSpot/${id}`)
+        fetch(`https://travelo-server-gamma.vercel.app/allTouristsSpot/${id}`)
         .then(res => res.json())
         .then(data => {
             setSpot(data);
