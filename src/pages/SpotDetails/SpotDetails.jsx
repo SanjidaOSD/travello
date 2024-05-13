@@ -3,11 +3,9 @@ import { FaSackDollar } from "react-icons/fa6";
 import { useLoaderData } from "react-router-dom";
 import { TiLocation } from "react-icons/ti";
 import { Fade } from "react-awesome-reveal";
-import useAuth from "../../hooks/useAuth";
 
 const SpotDetails = () => {
     const spot = useLoaderData();
-    const {userData} = useAuth()
     const {countryName, spotName, image, location, description, average, seasonality, travelTime, totalVisitor, displayName, email} = spot
     
 
@@ -39,9 +37,6 @@ const SpotDetails = () => {
                             <hr className="my-3 border border-dashed"/>
                             <div className="flex items-center gap-3 font-medium text-[12px]">
                                 <h1>Spot Added By : </h1>
-                                <div>
-                                    <img className="h-10 w-10 rounded-full border-2 p-1" src={userData.photoURL} alt="" />
-                                </div>
                                 <div>
                                     <p>{displayName}</p>
                                     <p>{email}</p>

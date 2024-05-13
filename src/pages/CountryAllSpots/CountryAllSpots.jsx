@@ -9,7 +9,7 @@ const CountryAllSpots = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(()=>{
-        fetch(`https://travelo-server-gamma.vercel.app/country/${country}`)
+        fetch(`http://localhost:5000/country/${country}`)
         .then(res => res.json())
         .then(data => {
             setCountrySpots(data)

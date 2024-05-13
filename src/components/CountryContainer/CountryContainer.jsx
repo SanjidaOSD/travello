@@ -10,7 +10,7 @@ const CountryContainer = () => {
 
 
     useEffect(()=>{
-        fetch('https://travelo-server-gamma.vercel.app/country')
+        fetch('http://localhost:5000/country')
         .then(res => res.json())
         .then(data => {
             setCountries(data)
