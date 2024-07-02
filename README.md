@@ -1,8 +1,6 @@
-# Website Name : Travelo
-# Selected Type : B9A10 Type-01 Requirements
-# Selected Category : Southeast Asia
-# Live Link : https://travelobd.netlify.app
-
+Website Name : Travelo
+Live Link : https://travelobd.netlify.app
+Server Code : https://github.com/mdrieadmia/Travelo-Server.git
 --------- Features of this Website -----------
 
 ✅ This is a tourist spot based website for Southeast Asia.
