@@ -1,6 +1,11 @@
 Website Name : Travelo
+
 Live Link : https://travelobd.netlify.app
+
 Server Code : https://github.com/mdrieadmia/Travelo-Server.git
+
+This website showcases tourist spots across Southeast Asia. Users can browse through various destinations and view details of each spot. To add a new tourist spot, users need to be logged in. Logged-in users can also view detailed information about each spot. In the "My List" section, users can see all the spots they have added, with options to update or delete any spot from their list. The website is designed to be fully responsive, ensuring an optimal experience on mobile, tablet, and desktop devices.
+
 --------- Features of this Website -----------
 
 ✅ This is a tourist spot based website for Southeast Asia.
