@@ -34,3 +34,18 @@ This website showcases tourist spots across Southeast Asia. Users can browse thr
 ✅ React Icons
 
 ✅ Swiper Slider
+
+
+-------------- Steps For Locally Run This Code --------------
+
+Clone the repository : 
+git clone https://github.com/username/repository-name.git
+
+Navigate to the project directory : 
+cd repository-name
+
+Install dependencies : 
+npm install
+
+Run the development server : 
+npm run dev
