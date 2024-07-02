@@ -41,7 +41,7 @@ This website showcases tourist spots across Southeast Asia. Users can browse thr
 Step - 1
  
 Clone the repository : 
-git clone https://github.com/username/repository-name.git
+git clone https://github.com/mdrieadmia/Travelo-Client.git
 
 Step - 2
  
