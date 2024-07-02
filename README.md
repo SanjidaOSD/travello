@@ -38,14 +38,22 @@ This website showcases tourist spots across Southeast Asia. Users can browse thr
 
 -------------- Steps For Locally Run This Code --------------
 
+Step - 1
+ 
 Clone the repository : 
 git clone https://github.com/username/repository-name.git
 
+Step - 2
+ 
 Navigate to the project directory : 
 cd repository-name
 
+Step - 3
+ 
 Install dependencies : 
 npm install
 
+Step - 4
+ 
 Run the development server : 
 npm run dev
